@@ -27,45 +27,12 @@ public class RelationGraph {
         NodeAndEdge nAe = new NodeAndEdge(persons);
         lists.add(nAe.getNode());
         lists.add(nAe.getEdge());
-//        for(int i = 0; i<persons.size(); ++i){
-//            Person p = persons.get(i);
-//            List<Relation> relations = p.getRel();
-//            for(int j = 0; j<relations.size(); ++j) {
-//                lists.add(nAe.getEdge(p.getName(),relations.get(j).getName(),
-//                        relations.get(j).getRel(),relations.get(j).getSrel()));
-//            }
-//        }
         return lists;
     }
 
     private void createPersons(){
         int length = arr.size();
         for(int i = 0; i<length;i+=3){
-
-//            NodeAndEdge nAe = new NodeAndEdge(
-//                    arr.get(i).split("=")[1].toUpperCase(),
-//                    arr.get(i+1).split("=")[1].toUpperCase(),
-//                    arr.get(i+2).split("=")[1].toUpperCase()
-//            );
-
-//            int numb = getNumbPerson(nAe.getmName());
-//            Person p;
-//            if(numb==-1){
-//                p = new Person(nAe.getmName());
-//                p.addRel(nAe.getRel(),nAe.getsName());
-//                p.addRel(nAe.getsRel(),nAe.getsName());
-//                if(!isExistHero(nAe.getmName())){
-//                    allHeroes.add(nAe.getmName());
-//                }
-//                if(!isExistHero(nAe.getsName())){
-//                    allHeroes.add(nAe.getsName());
-//                }
-//                persons.add(p);
-//            }else{
-//                p = persons.get(numb);
-//                p.addRel(nAe.getRel(),nAe.getsName());
-//                p.addRel(nAe.getsRel(),nAe.getsName());
-//            }
             String  name = arr.get(i).split("=")[1].toUpperCase().substring(1),
                     sname = arr.get(i+1).split("=")[1].toUpperCase().substring(1),
                     rel = arr.get(i+2).split("=")[1].toUpperCase().substring(1);
@@ -142,17 +109,6 @@ public class RelationGraph {
         }
     }
 
-//    private boolean findSimilarNameHeroes(String name){
-//        boolean success = false;
-//        if(name.split(" ").length ==1 ){
-//            for(int i = 0; i < allHeroes.size();++i){
-//                if(name.equalsIgnoreCase(allHeroes.get(i).split(" ")[0])){
-//                    success = true;
-//                }
-//            }
-//        }
-//        return success;
-//    }
 
     private int getNumbPerson(String e){
         if(!persons.isEmpty()) {

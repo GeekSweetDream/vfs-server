@@ -21,9 +21,4 @@ public class DataContoller {
         return dataService.getData(id);
     }
 
-//    @RequestMapping(value = "/upload",method = RequestMethod.POST)
-//    public Map<String,Object> uploadFile(){
-//        return dataService.uploadData();
-//    }
-
 }
